@@ -17,9 +17,11 @@ int main(void) {
     if ((pid = fork()) < 0) {
         err_sys("fork error");
     } else if (pid == 0) {
+        printf("this is child precess ");
         gloval++;
         var++;
     } else {
+        printf("parent");
         sleep(2);
     }
 
